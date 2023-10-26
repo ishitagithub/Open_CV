@@ -7,7 +7,6 @@ api_url = "https://min-api.cryptocompare.com/data/"
 hist_url = api_url + "histoday"
 # Streamlit setup
 st.title("CBasic Crypto Trading Bot")
-top_bar = st.beta_container()
 st.sidebar.title("Settings")
 
 # User-defined settings
