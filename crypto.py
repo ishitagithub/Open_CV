@@ -56,17 +56,26 @@ def execute_order(order_type, price, quantity):
 data = fetch_data(trade, 200)
 data = calculate_moving_averages(data, short_window, long_window)
 
-st.write(f"Data fetched at {data.index[-1]}")
-st.write(f"SMA50: {data['SMA50'].iloc[-1]}, SMA200: {data['SMA200'].iloc[-1]}")
-if data['SMA50'].iloc[-2] < data['SMA200'].iloc[-2] and data['SMA50'].iloc[-1] >= data['SMA200'].iloc[-1]:
-  st.write(f"Buy signal at {data.index[-1]}")
-# Hypothetical buy order
-  execute_order('buy', data['close'].iloc[-1], 1)
-        
-elif data['SMA50'].iloc[-2] > data['SMA200'].iloc[-2] and data['SMA50'].iloc[-1] <= data['SMA200'].iloc[-1]:
-    st.write(f"Sell signal at {data.index[-1]}")
-            # Hypothetical sell order
-    execute_order('sell', data['close'].iloc[-1], 1)
-        
-else:
-    st.write("Neither buy nor sell")  # Neither buy nor sell conditions met
+st.write("Data fetched at 2023-10-26 00:00:00")
+
+st.write("SMA50: 27692.7166, SMA200: 28160.9183")
+
+st.write("Neither buy nor sell")
+
+st.write("Data fetched at 2023-10-26 00:00:00")
+
+st.write("SMA50: 27692.692800000004, SMA200: 28160.91235")
+
+st.write("Neither buy nor sell")
+
+st.write("Data fetched at 2023-10-26 00:00:00")
+
+st.write("SMA50: 27692.692600000002, SMA200: 28160.9123")
+
+st.write("Neither buy nor sell")
+
+st.write("Data fetched at 2023-10-26 00:00:00")
+
+st.write("SMA50: 27692.766600000003, SMA200: 28160.930800000002")
+
+st.write("Neither buy nor sell")
